@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9536AF1C27EC65BB00BA829A /* SecondSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9536AF1B27EC65BB00BA829A /* SecondSwiftUIView.swift */; };
+		9536AF1E27EC675700BA829A /* UIKitButtonRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9536AF1D27EC675700BA829A /* UIKitButtonRepresentable.swift */; };
 		DB3EA27327EB2FA700889767 /* UITransitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3EA27227EB2FA700889767 /* UITransitionApp.swift */; };
 		DB3EA27527EB2FA700889767 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3EA27427EB2FA700889767 /* ContentView.swift */; };
 		DB3EA27727EB2FA800889767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3EA27627EB2FA800889767 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9536AF1B27EC65BB00BA829A /* SecondSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSwiftUIView.swift; sourceTree = "<group>"; };
+		9536AF1D27EC675700BA829A /* UIKitButtonRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitButtonRepresentable.swift; sourceTree = "<group>"; };
 		DB3EA26F27EB2FA700889767 /* UITransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3EA27227EB2FA700889767 /* UITransitionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITransitionApp.swift; sourceTree = "<group>"; };
 		DB3EA27427EB2FA700889767 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			children = (
 				DB3EA27227EB2FA700889767 /* UITransitionApp.swift */,
 				DB3EA27427EB2FA700889767 /* ContentView.swift */,
+				9536AF1D27EC675700BA829A /* UIKitButtonRepresentable.swift */,
+				9536AF1B27EC65BB00BA829A /* SecondSwiftUIView.swift */,
 				DB3EA27627EB2FA800889767 /* Assets.xcassets */,
 				DB3EA27827EB2FA800889767 /* Preview Content */,
 			);
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9536AF1C27EC65BB00BA829A /* SecondSwiftUIView.swift in Sources */,
 				DB3EA27527EB2FA700889767 /* ContentView.swift in Sources */,
 				DB3EA27327EB2FA700889767 /* UITransitionApp.swift in Sources */,
+				9536AF1E27EC675700BA829A /* UIKitButtonRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
