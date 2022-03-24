@@ -20,7 +20,7 @@ struct UIKitButtonRepresentable: UIViewRepresentable {
             let hostingView = UIHostingController(rootView: SecondSwiftUIView())
             
             hostingView.modalPresentationStyle = .fullScreen
-            hostingView.modalTransitionStyle = .crossDissolve
+            hostingView.modalTransitionStyle = .flipHorizontal
             
             button.window?.rootViewController?.present(hostingView, animated: true)
         }
