@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct UIKitButtonRepresentable: UIViewRepresentable {
-    @Binding var isPresenting: Bool
     
     func makeUIView(context: Context) -> UIButton {
         let button = UIButton(type: .system)
@@ -18,10 +17,12 @@ struct UIKitButtonRepresentable: UIViewRepresentable {
         button.tintColor = UIColor.label
         
         let action = UIAction{_ in
-            print(isPresenting)
-            isPresenting.toggle()
-            print(isPresenting)
+            let hostingView = UIHostingController(rootView: SecondSwiftUIView())
             
+            hostingView.modalPresentationStyle = .fullScreen
+            hostingView.modalTransitionStyle = .crossDissolve
+            
+            button.window?.rootViewController?.present(hostingView, animated: true)
         }
         
         button.addAction(action, for: .touchUpInside)
@@ -30,17 +31,7 @@ struct UIKitButtonRepresentable: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIButton, context: Context) {
-        let hostingView = UIHostingController(rootView: SecondSwiftUIView(isPresenting: $isPresenting))
-        
-        hostingView.modalPresentationStyle = .fullScreen
-        hostingView.isModalInPresentation = false
-        hostingView.modalTransitionStyle = .crossDissolve
-
-        if isPresenting {
-            uiView.window?.rootViewController?.present(hostingView, animated: true)
-        } else {
-            uiView.window?.rootViewController?.dismiss(animated: true, completion: nil)
-        }
+        //
     }
     
     typealias UIViewType = UIButton
@@ -48,6 +39,6 @@ struct UIKitButtonRepresentable: UIViewRepresentable {
 
 struct UIKitButtonRepresentable_Previews: PreviewProvider {
     static var previews: some View {
-        UIKitButtonRepresentable(isPresenting: .constant(true))
+        UIKitButtonRepresentable()
     }
 }

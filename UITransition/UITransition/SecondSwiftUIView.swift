@@ -8,25 +8,24 @@
 import SwiftUI
 
 struct SecondSwiftUIView: View {
-    @Binding var isPresenting: Bool
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
-        VStack{
-            Text("Hello, Second World!")
-                .foregroundColor(.pink)
-            Button("Dismiss") {
-                isPresenting.toggle()
-                presentationMode.wrappedValue.dismiss()
-                print(isPresenting)
+        ZStack {
+            Color(UIColor.yellow)
+            VStack{
+                Text("Hello, Second World!")
+                Button("Dismiss") {
+                    presentationMode.wrappedValue.dismiss()
+                }
             }
         }
         .ignoresSafeArea()
-        .background(Color.green)
+
     }
 }
 
 struct SecondSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        SecondSwiftUIView(isPresenting: .constant(true))
+        SecondSwiftUIView()
     }
 }
