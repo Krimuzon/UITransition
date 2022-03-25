@@ -14,9 +14,10 @@ struct ContentView: View {
             VStack{
                 Image("MoonPixel").resizable().aspectRatio(contentMode: .fit)
                 
-                Text("Tap to see the dark side of the moon")
+                Text("Tap to see the other side of the moon")
                     .font(.title2)
                     .foregroundColor(.white)
+                    .frame(width: 360)
                     .padding()
                 UIKitButtonRepresentable()
                     .frame(width: 100, height: 100)
