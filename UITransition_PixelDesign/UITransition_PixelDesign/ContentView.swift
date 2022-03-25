@@ -9,23 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
         ZStack{
-            Color(UIColor.red)
-            
+            Color(UIColor.black)
             VStack{
-                Text("Hello, world!")
-                    .font(.largeTitle)
-                    .padding()
+                Image("MoonPixel").resizable().aspectRatio(contentMode: .fit)
                 
-                Image(systemName: "arrow.right.circle.fill")
-                    .font(.system(size: 100, weight: .medium, design: .default))
-                    .overlay {
-                        UIKitButtonRepresentable()
-                    }
-            }
-        }
-        .ignoresSafeArea()
+                Text("Tap to see the dark side of the moon")
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .padding()
+                UIKitButtonRepresentable()
+                    .frame(width: 100, height: 100)
+                    
+            }.padding()
+        }.ignoresSafeArea()
     }
 }
 

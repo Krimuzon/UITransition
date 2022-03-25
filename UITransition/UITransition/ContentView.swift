@@ -12,15 +12,14 @@ struct ContentView: View {
         
         ZStack{
             Color(UIColor.red)
+            
             VStack{
                 Text("Hello, world!")
                     .font(.largeTitle)
                     .padding()
-                Image(systemName: "arrow.right.circle.fill")
-                    .font(.system(size: 100, weight: .medium, design: .default))
-                    .overlay {
-                        UIKitButtonRepresentable()
-                    }
+                
+                UIKitButtonRepresentable()
+                    .frame(width: 100, height: 100)
             }
         }
         .ignoresSafeArea()
