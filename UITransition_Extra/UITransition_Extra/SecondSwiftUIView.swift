@@ -9,13 +9,16 @@ import SwiftUI
 
 struct SecondSwiftUIView: View {
     @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ZStack {
             Color(UIColor.yellow)
+            
             VStack{
                 Text("Hello, Second World!")
                     .padding()
                     .font(.largeTitle)
+                
                 Button {
                     presentationMode.wrappedValue.dismiss()
                 } label: {

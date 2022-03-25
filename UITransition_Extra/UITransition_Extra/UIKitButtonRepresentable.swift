@@ -11,10 +11,6 @@ struct UIKitButtonRepresentable: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UIButton {
         let button = UIButton(type: .system)
-//        let imageConfiguration = UIImage.SymbolConfiguration(pointSize: 100, weight: .medium, scale: .default)
-//        let image = UIImage(systemName: "arrow.right.circle.fill", withConfiguration: imageConfiguration)
-//        button.setImage(image, for: .normal)
-//        button.tintColor = UIColor.label
         
         let action = UIAction{_ in
             let hostingView = UIHostingController(rootView: SecondSwiftUIView())
